@@ -6,6 +6,8 @@ export const GetCurrentUserById = createParamDecorator(
 
         const request = ctx.switchToHttp().getRequest()
 
+        console.log(data)
+
         return request.user.id
 
     }

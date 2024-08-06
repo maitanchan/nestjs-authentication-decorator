@@ -10,20 +10,25 @@ import { JwtAuthStrategy } from './strategy/jwt-auth-strategy';
   imports: [
 
     PassportModule,
+
     JwtModule.register({
+
       secret: 'secret-key',
+
       signOptions: { expiresIn: '1d' }
+
     })
 
   ],
 
-  controllers: [
-    AuthController
-  ],
+  controllers: [AuthController],
 
   providers: [
+
     AuthService,
+
     JwtAuthStrategy
+
   ]
 
 })
